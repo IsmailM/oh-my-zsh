@@ -139,7 +139,7 @@ function _per-directory-history-set-global-history() {
   _per_directory_history_is_global=true
 }
 
-
+autoload -U add-zsh-hook
 #add functions to the exec list for chpwd and zshaddhistory
 add-zsh-hook chpwd _per-directory-history-change-directory
 add-zsh-hook zshaddhistory _per-directory-history-addhistory
