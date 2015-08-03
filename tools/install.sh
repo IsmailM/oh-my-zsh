@@ -8,7 +8,7 @@ if [ -d "$ZSH" ]; then
   exit
 fi
 
-hash git >/dev/null 2>&1 && env git clone --depth=1 https://github.com/IsmailM/oh-my-zsh.git $ZSH  >/dev/null || {
+hash git >/dev/null 2>&1 && env git clone --depth=1 --quiet https://github.com/IsmailM/oh-my-zsh.git $ZSH || {
   exit
 }
 
