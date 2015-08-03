@@ -26,6 +26,3 @@ export PATH=\"$PATH\"
 " ~/.zshrc
 
 echo 'Oh-My-ZSH has been installed'
-
-env zsh
-. ~/.zshrc
