@@ -8,7 +8,7 @@ if [ -d "$ZSH" ]; then
   exit
 fi
 
-hash git >/dev/null 2>&1 && env git clone --depth=1 https://github.com/IsmailM/oh-my-zsh.git $ZSH || {
+hash git >/dev/null 2>&1 && env git clone --depth=1 https://github.com/IsmailM/oh-my-zsh.git $ZSH  >/dev/null || {
   exit
 }
 
@@ -24,6 +24,8 @@ export ZSH=$ZSH
 sed -i -e "/export PATH=/ c\\
 export PATH=\"$PATH\"
 " ~/.zshrc
+
+echo 'Oh-My-ZSH has been installed'
 
 env zsh
 . ~/.zshrc
